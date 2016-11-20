@@ -10,12 +10,24 @@ const {dev, prod} = require('../env');
 module.exports = ($$, _if, manifest) => {
     const config = {
         entry: {
-            app: './src/scripts/index.js'
+            app: ['babel-polyfill', './src/scripts/index.js']
         },
         output: {
             path: node_path.join(__dirname, '../public/js'),
             publicPath: '/js',
             filename: dev ? '[name].js' : '[name]-[chunkhash:10].js'
+        },
+        module: {
+            loaders: [
+                {
+                    test: /\.js$/,
+                    include: node_path.resolve('./src'),
+                    loader: 'babel',
+                    query: {
+                        presets: ['es2015']
+                    }
+                }
+            ]
         },
         watch: dev,
         devtool: dev ? 'cheap-module-inline-source-map' : null,
