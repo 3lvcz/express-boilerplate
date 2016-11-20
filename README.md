@@ -13,5 +13,9 @@ or
 
 `npm run dev`
 
+BrowserSync starts at [:8080](https://github.com/3lvcz/express-boilerplate/blob/master/package.json#L32)
+
 ## Production build
 `./build.sh`
+
+Server starts at [:3000](https://github.com/3lvcz/express-boilerplate/blob/master/package.json#L31)
