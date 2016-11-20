@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const combine = require('stream-combiner2').obj;
+const autoprefixer = require('autoprefixer');
 const {dev, prod} = require('../env');
 
 module.exports = ($$, _if, manifest) =>
@@ -17,6 +18,11 @@ module.exports = ($$, _if, manifest) =>
             'include css': true
             /*define: { url: stylus.resolver() }*/
         }))
+        .pipe($$.postcss([
+            autoprefixer({
+                browsers: ['last 2 versions']
+            })
+        ]))
         .pipe(_if(prod, combine(
             $$.revReplace({
                 manifest: gulp.src(manifest, {allowEmpty: true})
