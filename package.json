@@ -1,0 +1,68 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Beklov Evgeniy <beklowea@gmail.com>",
+  "bugs": "https://github.com/3lvcz/express-boilerplate/issues",
+  "description": "express + nunjucks + stylus + es2015 (gulp + webpack + browser-sync)",
+  "keywords": [
+    "express",
+    "nunjucks",
+    "stylus",
+    "es2015",
+    "gulp",
+    "webpack",
+    "browser-sync"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^6.9.1",
+    "yarn": "^0.17.6"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3lvcz/express-boilerplate.git"
+  },
+  "config": {
+    "APP_PORT": 3000,
+    "BS_PORT": 8080
+  },
+  "scripts": {
+    "clean": "./node_modules/.bin/gulp build:clean",
+    "debug": "NODE_ENV=development node debug .",
+    "dev": "NODE_ENV=development ./node_modules/.bin/gulp",
+    "prod": "NODE_ENV=production ./node_modules/.bin/gulp build"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.0",
+    "browser-sync": "^2.18.1",
+    "del": "^2.2.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-develop-server": "^0.5.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-util": "^3.0.7",
+    "node-notifier": "^4.6.1",
+    "normalize-css": "^2.3.1",
+    "stream-combiner2": "^1.1.1",
+    "webfontloader": "^1.6.26",
+    "webpack": "^1.13.3"
+  }
+}
