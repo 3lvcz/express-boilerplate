@@ -29,6 +29,18 @@ module.exports = ($$, _if, manifest) => {
                 }
             ]
         },
+        node: {
+            'child_process': 'empty',
+            'crypto': 'empty',
+            'fs': 'empty',
+            'http': 'empty',
+            'https': 'empty',
+            'net': 'empty',
+            'os': 'empty',
+            'string_decoder': 'empty',
+            'vm': 'empty',
+            'zlib': 'empty'
+        },
         watch: dev,
         devtool: dev ? 'cheap-module-inline-source-map' : null,
         plugins: [
